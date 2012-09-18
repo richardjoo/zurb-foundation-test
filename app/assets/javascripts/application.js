@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require foundation/jquery.foundation.topbar
 //= require_tree .
+
+$(document).ready(function() {
+	$(document).foundationTopBar()
+});
