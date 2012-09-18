@@ -1,0 +1,38 @@
+<h1>Zurb-foundation-test</h1>
+<p>This repo was created as a test to show bugs/issues with the <%= link_to 'zurb foundation', 'http://foundation.zurb.com/' %> <%= link_to 'gem', 'http://www.google.com/url?sa=t&rct=j&q=zurb%20foundation%20github&source=web&cd=1&ved=0CB0QFjAA&url=https%3A%2F%2Fgithub.com%2Fzurb%2Ffoundation&ei=1vxYUImFFY208ATr2IC4CA&usg=AFQjCNH5RY4eb0wZassZUNtdVaY7U9YFlg' %>.</p>
+
+<h2>App procedure</h2>
+<ol>
+	<li>new rails app was created</li>
+	<li>gems were added to assets ground in gemfile, as stated in the docs under <%= link_to 'Gem Versions / Rails', 'http://foundation.zurb.com/docs/gem-install.php#simple2'%></li>
+	<li>edited gemfile to reflect zurb foundation 3.1</li>
+	<li>ran <code>rails g foundation:install</code> and <code>rails g foundation:layout</code> as per docs under <%= link_to 'Gem Versions / Rails', 'http://foundation.zurb.com/docs/gem-install.php#simple2'%></li>
+	<li>created controller with actions for this page and templates, copied from zurb foundation's <%= link_to 'templates', 'http://foundation.zurb.com/templates.php' %>.</li>
+</ol>
+
+<h2>Versions</h2>
+<ul>
+	<li>rails (3.2.8)</li>
+	<li>compass (0.12.2)</li>
+	<li>compass-rails (1.0.3)</li>
+	<li>zurb-foundation (3.1.0)</li>
+</ul>
+
+<h2>Issues</h2>
+<ul>
+	<li>
+		<p>zurb-foundation gem does not require <code>jquery.foundation.topbar.js</code></p>
+		<p>A patch is to require it manually in <code>application.js</code> manifest file.</p>
+		<p><code>//= require foundation/jquery.foundation.topbar</code></p>
+	</li>
+	<li>
+		<p>Dropdown arrow in top bar does not show</p>
+		<p>In the docs under <%= link_to 'navigation', 'http://foundation.zurb.com/docs/navigation.php' %> navigate to "top bar" and then "basic needs". It states <q>the <code>li.toggle-topbar</code> element that will expand the menu in the repsonsive layout.</q> However, in the templates, the arrow has a class of <code>toggle-nav</code>.</p>
+		<p>To remedy this, change the class of the arrow to <code>li.toggle-topbar</code>, as stated in the docs.</p>
+	</li>
+</ul>
+
+<h2>Live rendered templates</h2>
+<ul>
+	<li><%= link_to 'contact', pages_contact_path %></li>
+</ul>
