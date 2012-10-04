@@ -1,6 +1,21 @@
 ZurbFoundationTest::Application.routes.draw do
-  get "pages/index"
-  get "pages/contact"
+  get "test/index"
+
+  get "templates/banded"
+
+  get "templates/blog"
+
+  get "templates/feed"
+
+  get "templates/grid"
+
+  get "templates/orbit"
+
+  get "templates/banner"
+
+  get "templates/sidebar"
+
+  get "templates/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

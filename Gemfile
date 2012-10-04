@@ -20,7 +20,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'compass-rails', '~> 1.0.3'							# https://github.com/Compass/compass-rails
-  gem 'zurb-foundation', '~> 3.1.0'						# http://foundation.zurb.com/docs/
+  gem 'zurb-foundation',          						# http://foundation.zurb.com/docs/
+    :git => 'https://github.com/zurb/foundation.git',
+    :branch => 'master'
 end
 
 gem 'jquery-rails'

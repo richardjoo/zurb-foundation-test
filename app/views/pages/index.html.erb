@@ -1,53 +1,30 @@
-<h1>Zurb-foundation-test</h1>
-<p>This repo was created as a test to show bugs/issues with the <%= link_to 'zurb foundation', 'http://foundation.zurb.com/' %> <%= link_to 'gem', 'http://www.google.com/url?sa=t&rct=j&q=zurb%20foundation%20github&source=web&cd=1&ved=0CB0QFjAA&url=https%3A%2F%2Fgithub.com%2Fzurb%2Ffoundation&ei=1vxYUImFFY208ATr2IC4CA&usg=AFQjCNH5RY4eb0wZassZUNtdVaY7U9YFlg' %>.</p>
+<h1>zurb-foundation-test</h1>
 
-<h2>App procedure</h2>
-<ol>
-	<li>new rails app was created</li>
-	<li>gems were added to assets ground in gemfile, as stated in the docs under <%= link_to 'Gem Versions / Rails', 'http://foundation.zurb.com/docs/gem-install.php#simple2'%></li>
-	<li>edited gemfile to reflect zurb foundation 3.1</li>
-	<li>ran <code>rails g foundation:install</code> and <code>rails g foundation:layout</code> as per docs under <%= link_to 'Gem Versions / Rails', 'http://foundation.zurb.com/docs/gem-install.php#simple2'%></li>
-	<li>created controller with actions for this page and templates, copied from <%= link_to 'templates', 'http://foundation.zurb.com/templates.php' %>.</li>
-</ol>
-
-<h2>Versions</h2>
+<h3>Links</h3>
 <ul>
-	<li>rails (3.2.8)</li>
-	<li>compass (0.12.2)</li>
-	<li>compass-rails (1.0.3)</li>
-	<li>zurb-foundation (3.1.0)</li>
+	<li><%= link_to 'foundation github page', 'https://github.com/zurb/foundation', :target =>'_blank' %></li>
+	<li><%= link_to 'foundation documentation', 'http://foundation.zurb.com/docs/', :target =>'_blank' %></li>
+	<li><%= link_to 'zurb-foundation-test github page', 'https://github.com/keilmillerjr/zurb-foundation-test', :target =>'_blank' %></li>
 </ul>
 
-<h2>Issues</h2>
+<h3>Templates</h3>
+<p>These templates are copied from <%= link_to 'HTML Templates', 'http://foundation.zurb.com/templates.php', :target => '_blank' %> and are rendered live, as a way to test the foundation gem.</p>
+<p>Tesmplates last updated: October 4, 2012</p>
 <ul>
-	<li>
-		<h3>zurb-foundation gem does not require <code>jquery.foundation.topbar.js</code></h3>
-		<p>A patch is to require it manually in <code>application.js</code> manifest file.</p>
-		<p><code>//= require foundation/jquery.foundation.topbar</code></p>
-	</li>
-	<li>
-		<h3>When in responsive mobile view, the expand arrow in top bar does not show</h3>
-		<p>In the docs under <%= link_to 'navigation', 'http://foundation.zurb.com/docs/navigation.php' %>, navigate to "top bar" and then "basic needs". It states <q>the <code>li.toggle-topbar</code> element that will expand the menu in the repsonsive layout.</q> However, in the templates, the arrow has a class of <code>toggle-nav</code>.</p>
-		<p>To remedy this, change the class of the arrow to <code>toggle-topbar</code>, as stated in the docs.</p>
-	</li>
-	<li>
-		<h3>When in responsive mobile view, top bar does not expand when clicking on the arrow</h3>
-		<p>Top bar is not initiated automatically. You must add the following code to be executed after requiring foundation. Thanks to @mhayes.</p>
-		<p>
-			<pre><code>
-$(document).ready(function() {
-	$(document).foundationTopBar()
-});
-			</pre></code>
-		</p>
-	</li>
-	<li>
-		<h3>Applying the <code>top-bar contain-to-grid</code> classes to the top bar nav results in the viewport being expanded to the right</h3>
-		<p>Issue does not occur when <code>top-bar contain-to-grid fixed</code> classes is applied to the top bar nav. @zurbchris is looking to add a fix for the issue this week. I'll update if a fix for the issue is found.</p>
-	</li>
+	<li><%= link_to 'banded', templates_banded_path %></li>
+	<li><%= link_to 'banner', templates_banner_path %></li>
+	<li><%= link_to 'blog', templates_blog_path %></li>
+	<li><%= link_to 'contact', templates_contact_path %></li>
+	<li><%= link_to 'feed', templates_feed_path %></li>
+	<li><%= link_to 'grid', templates_grid_path %></li>
+	<li><%= link_to 'orbit', templates_orbit_path %></li>
+	<li><%= link_to 'sidebar', templates_sidebar_path %></li>
 </ul>
 
-<h2>Live rendered templates</h2>
+<h3>Test Page</h3>
+<p>Feel free to use they test layout and view as your own personal testing page.</p>
 <ul>
-	<li><%= link_to 'contact', pages_contact_path %></li>
+	<li><%= link_to 'test', test_index_path %></li>
 </ul>
+
+<p><small>Keil Miller Jr 2012</small></p>
